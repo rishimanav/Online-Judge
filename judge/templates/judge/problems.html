@@ -1,0 +1,17 @@
+
+{% extends "judge/base.html" %}
+
+{% block 1 %}
+
+    {% if problem_list %}
+        <ol>
+        {% for problem in problem_list %}
+            <li><a href="/judge/submit/{{problem.prob_id}}">{{ problem.name }}</a></li>
+        {% endfor %}
+        </ol>
+    {% else %}
+        <p>No problems are available.</p>
+    {% endif %} 
+
+{% endblock %}
+

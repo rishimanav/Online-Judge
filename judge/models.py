@@ -50,7 +50,8 @@ class Problem(models.Model):
     crr_sub= models.IntegerField()
     total_sub= models.IntegerField()
     
-    
+    def __str__(self):
+        return self.name;
     
     # pub_date = models.DateTimeField('date published')
 
